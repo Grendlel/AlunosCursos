@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Cpt.Gabriel</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Escola Cpt.Gabriel</h1>
+    </header>
+        <nav>
+            <div class="links">
+                <a href="http:/alunos">Alunos</a>
+                <a href="http:/cursos">Cursos</a>
+            </div>
+        </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+</body>
+<footer>
+    <h1>Patrocinado por CPDM-MG</h1>
+</footer>
+</html>

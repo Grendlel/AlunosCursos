@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div>
+        <a href="/cursos/add">Adicionar</a>
+    </div>
+    <table>
+        <tr>
+            <th>Aluno</th>
+            <th>Nome do Curso</th>
+            <th>Data</th>
+        </tr>
+        {% for c in cursos %}
+        <tr>
+            <td>{{c.aluno.nome}}</td>
+            <td>{{c.nome}}</td>
+            <td>{{c.duracao}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
